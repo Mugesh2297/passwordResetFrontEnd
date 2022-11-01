@@ -29,9 +29,11 @@ function Passwordreset() {
      if(response.status===200){
       alert("Email Sent")
       navigate("/")
-     }else{
-      alert("Enter Valid email or Existing email")
      }
+    if(response.status===400){
+        alert("Not an Existing User Please Signup to Continue");
+      navigate("/register")
+    }
   }
   return (
     <div style={{ margin: "10%", paddingLeft: "30%" }}><Typography variant="h4">
