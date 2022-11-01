@@ -1,3 +1,15 @@
+Front End URL : https://passwordreset22.netlify.app/
+
+
+
+Back End URL : https://passresetbackend22.herokuapp.com/
+
+
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
