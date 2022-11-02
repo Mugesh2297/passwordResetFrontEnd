@@ -69,6 +69,9 @@ function Passwordreset() {
     </form>
     <br />
         
+<div><span><Link to="/">Remember Your password Login??</Link></span></div>
+<br/>
+<div><span><Link to="/register">Don't have a account Register??</Link></span></div>
 
 
     {/* <h3><Link to={/Resetpassword}>ResetPassword </h3></Link> */}
