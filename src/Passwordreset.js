@@ -7,25 +7,38 @@ import { Button, TextField, Typography } from "@mui/material";
 function Passwordreset() {
   
   const navigate = useNavigate();
- 
-  let formik = useFormik({
+  const formik = useFormik({
     initialValues: {
-      email: "",
-    },
+        
+        email: "",
+       
+       
+    },  
     validate: (values) => {
         let errors = {};
+       
         if (values.email === "") {
-            errors.email = "Please Enter Email"
+            errors.email = "Please Enter Email Id"
         }
+        
+       
+
         return errors;
     },
     onSubmit: async (values) => {
-      let user = await axios.post('https://passresetbackend22.herokuapp.com/forgotpassword', values);
-      console.log(user);
+        try {
+            var response = await axios.post("https://passresetbackend22.herokuapp.com/forgotpassword", values);
+          console.log(response)
+        }
+        catch (err) {
+            console.log(err.response);
+            alert(err.response.data.msg);
+        }
     }
-   
-  });
- 
+
+
+})
+  
   return (
     <div style={{ margin: "10%", paddingLeft: "30%" }}><Typography variant="h4">
     Reset Password
