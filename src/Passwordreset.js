@@ -29,7 +29,10 @@ function Passwordreset() {
         try {
             var response = await axios.post("https://passresetbackend22.herokuapp.com/forgotpassword", values);
           console.log(response)
-          alert(response.data.msg);
+         if(response.status===200){
+          alert("Email sent to Your Mail");
+          navigate("/")
+         }
         }
         catch (err) {
             console.log(err.response);
