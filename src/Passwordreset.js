@@ -27,7 +27,7 @@ function Passwordreset() {
     },
     onSubmit: async (values) => {
         try {
-            var response = await axios.post("https://passresetbackend22.herokuapp.com/forgotpassword", values);
+            var response = await axios.post("https://passwordreset.onrender.com/forgotpassword", values);
           console.log(response)
          if(response.status===200){
           alert("Email sent to Your Mail");
