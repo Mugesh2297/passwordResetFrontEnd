@@ -27,7 +27,7 @@ function LoginComponent() {
 
         onSubmit: async (values) => {
             try {
-                var response = await axios.post("https://passresetbackend22.herokuapp.com/register/signin", values);
+                var response = await axios.post("https://passwordreset.onrender.com/register/signin", values);
                 console.log(response)
                 localStorage.setItem("token", response.data);
                 navigate("/products");
