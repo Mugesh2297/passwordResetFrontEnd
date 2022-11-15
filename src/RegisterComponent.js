@@ -33,7 +33,7 @@ function RegisterComponent() {
         },
         onSubmit: async (values) => {
             try {
-                var response = await axios.post("https://passresetbackend22.herokuapp.com/register/signup", values);
+                var response = await axios.post("https://passwordreset.onrender.com/register/signup", values);
                 localStorage.setItem("token", response.data);
                 alert("User Created");
                 navigate("/");
