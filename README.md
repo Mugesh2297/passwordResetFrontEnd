@@ -6,6 +6,9 @@ Back End URL : https://passresetbackend22.herokuapp.com/
 
 
 
+                https://passwordreset.onrender.com/
+
+
 
 
 
